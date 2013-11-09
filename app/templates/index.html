@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% from "_formhelpers.html" import render_field %}
+
+{% block content %}
+<form method="post">
+  {% if form.errors %}
+  <div class="alert alert-danger">
+    <ul>
+  {% for field, errors in form.errors.iteritems() %}
+      <li>{{errors}}</li>
+  {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {{form.hidden_tag()}}
+
+  {{ render_field(form.path) }}
+  {{ render_field(form.status_code) }}
+  {{ render_field(form.latency) }}
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

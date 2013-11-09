@@ -1,0 +1,6 @@
+flask==0.10.0
+gevent==0.18.8
+gunicorn==18.0
+flask-mongoengine==0.7.0
+pyvows==2.0.4
+flask-wtf==0.9.3
