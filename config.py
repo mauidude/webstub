@@ -1,4 +1,0 @@
-CSRF_ENABLED=False
-SECRET_KEY = '622fa765fa110611a164164fa347e941687cb7711c4ad6f1017a448cdd4c8c64'
-
-MONGODB_SETTINGS = { "DB": "webstub", "HOST": "localhost" }
