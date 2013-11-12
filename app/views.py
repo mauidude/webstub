@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, redirect, flash, request
+from flask import render_template, redirect, flash, request, Response
 from app.forms import EndpointForm
 from app.models import Endpoint
 
@@ -29,4 +29,4 @@ def catchall(path):
   if endpoint.latency:
     time.sleep(endpoint.latency)
 
-  return 'Status: {0}'.format(endpoint.status_code), endpoint.status_code
+  return Response('', status=endpoint.status_code, mimetype=endpoint.content_type)
