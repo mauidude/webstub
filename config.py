@@ -21,6 +21,9 @@ if env == 'PRODUCTION':
     'USERNAME': parsed.get('username'),
     'PASSWORD': parsed.get('password')
   }
+  DEBUG=False
+  TESTING=False
+
 else:
   MONGODB_SETTINGS = {
     'DB': 'webstub',
