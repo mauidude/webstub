@@ -1,1 +1,1 @@
-web: gunicorn webstub
+web: gunicorn -e FLASK_ENV=PRODUCTION webstub
