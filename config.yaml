@@ -15,5 +15,8 @@ PRODUCTION: &production
   DEBUG: False
   TESTING: False
   MONGODB_SETTINGS:
-    DB: 'webstub'
-    HOST: 'localhost'
+    DB: <%= ENV['MONGO_DB'] %>
+    HOST: <%= ENV['MONGO_HOST'] %>
+    PORT: <%= ENV['MONGO_PORT'] %>
+    USERNAME: <%= ENV['MONGO_USERNAME'] %>
+    PASSWORD: <%= ENV['MONGO_PASSWORD'] %>
