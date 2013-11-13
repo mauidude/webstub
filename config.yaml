@@ -16,7 +16,4 @@ PRODUCTION: &production
   TESTING: False
   MONGODB_SETTINGS:
     DB: <%= ENV['MONGO_DB'] %>
-    HOST: <%= ENV['MONGO_HOST'] %>
-    PORT: <%= ENV['MONGO_PORT'] %>
-    USERNAME: <%= ENV['MONGO_USERNAME'] %>
-    PASSWORD: <%= ENV['MONGO_PASSWORD'] %>
+    host: <%= ENV['MONGOHQ_URL'] %>
