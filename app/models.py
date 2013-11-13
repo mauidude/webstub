@@ -1,6 +1,10 @@
 from app import db
 
 class Endpoint(db.Document):
+  meta = {
+    'indexes': [{ 'fields': ['path'], 'unique': True, 'expireAfterSeconds': 60*60*48 }],
+    'index_background': True
+  }
   STATUS_CODES = [200, 400, 401, 403, 404, 500, 501, 503]
   CONTENT_TYPES = ['application/json', 'application/xml']
 
