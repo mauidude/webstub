@@ -1,5 +1,11 @@
 import os
+import logging
+
+logging.info('Reading config...')
+
 env = os.environ.get('FLASK_ENV', 'DEVELOPMENT')
+
+logging.info('FLASK_ENV = {0}'.format(env))
 
 CSRF_ENABLED=True
 SECRET_KEY='622fa765fa110611a164164fa347e941687cb7711c4ad6f1017a448cdd4c8c64'
