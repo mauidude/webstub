@@ -29,6 +29,8 @@ if env == 'PRODUCTION':
   DEBUG=False
   TESTING=False
 
+  print 'MONGODB_SETTINGS = {0}'.format(MONGODB_SETTINGS)
+
 else:
   MONGODB_SETTINGS = {
     'DB': 'webstub',
