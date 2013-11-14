@@ -7,6 +7,7 @@ import time
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+  print 'Index called'
   form = EndpointForm(request.form)
 
   if form.validate_on_submit():
@@ -24,6 +25,7 @@ def index():
 
 @app.route('/<path:path>')
 def catchall(path):
+  print 'Catcch all called with {0}'.format(path)
   endpoint = Endpoint.objects.get_or_404(path=path)
 
   if endpoint.latency:
